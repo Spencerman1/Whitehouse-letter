@@ -1,0 +1,143 @@
+Delivered-To: spencersouthern12@gmail.com
+Received: by 2002:a05:651c:210e:b0:32b:9335:3e24 with SMTP id a14csp2214957ljq;
+        Wed, 20 Aug 2025 17:44:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IELdcmgbaMIN1UxXis8iL5q5C6ylMqbbBQKSZDCONEdyRTDPxnl6GwE0V7p14/ysTxqhjhD
+X-Received: by 2002:a05:622a:5a8c:b0:4b2:8ac4:f07b with SMTP id d75a77b69052e-4b29ffc55f8mr7677901cf.77.1755737061334;
+        Wed, 20 Aug 2025 17:44:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1755737061; cv=none;
+        d=google.com; s=arc-20240605;
+        b=M4Om6wY5/mpehhVdr3nv9zLHlLbtdqHYaEsHdxBvU2Nh37tPkYOwp7uMlbfkhBu415
+         Gk7Pn9k74c3hHZnzK/+XYOeJY5ffjIFaIEfArjhZSQdEqwnB2eW0Tv03bhJE4jJBvvwk
+         mJy0rSEk4n6vnghd+JFVgKrEvMNa2n2hITJMd1k09cpU44TtblKBR7UTFRieP4rq2u3W
+         Nt9/QVmOpkfD+1IILoddLvQgC9ROJmkRC5IT+qhMu6K+z80KFjAr6gl+9JgfiUlTn6Zv
+         D5QbcF/XDo6LUceKO6DrxN0iKJVZ43HkF1Edk+MIrg8L2vag+T2XXBmktTgOZNcczfys
+         42Fw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:subject:date:to:from:mime-version
+         :list-unsubscribe-post:list-unsubscribe:message-id:dkim-signature;
+        bh=ic7qyrS9icajH/MFLSvFmqND7pkRVRaAgmp8AOFD99w=;
+        fh=c6XWP2a8Zi0Z+7I7lxsEW19yJPZFZtqXLYmEDubjBRE=;
+        b=gLi5wHQJAJeCgw5ntE450mNie0grvt/41kRU4KKf7tQlVIICY8di+NQkU4Ys+dOX2e
+         YM2i9c/a34Pj3l0Pqo+/v2wMO06aW1Bkj7836ajDPKlPxTAkV9nOvOQLfYqWJRZ2UXU9
+         Zx78v8zdg9z2/dcyax05EZWKxAWdpJ1+kM100mPH5gVizVwWGjx7BuZ4y/LgdY8eDvQO
+         uxs8YsfCjhSibY/fC7G2LIbuWE0vDXSfk2dKnNYOxusAGPBK1hYbs2LH4CNJC+Br2uOd
+         YwtHcOR0G3gfRK0f4DdDGlesY0U0fOXYlmK4O++hDk5rRySfKAKjS9SIR87x6OavfTQ3
+         Gvaw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@contact.whitehouse.gov header.s=s1 header.b=RVLduswW;
+       spf=pass (google.com: domain of noreply@contact.whitehouse.gov designates 166.86.2.154 as permitted sender) smtp.mailfrom=noreply@contact.whitehouse.gov;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=contact.whitehouse.gov
+Return-Path: <noreply@contact.whitehouse.gov>
+Received: from 47eop.iqfed.com (47eop.iqfed.com. [166.86.2.154])
+        by mx.google.com with ESMTPS id d75a77b69052e-4b121752b46si56332361cf.1108.2025.08.20.17.44.21
+        for <spencersouthern12@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 20 Aug 2025 17:44:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@contact.whitehouse.gov designates 166.86.2.154 as permitted sender) client-ip=166.86.2.154;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@contact.whitehouse.gov header.s=s1 header.b=RVLduswW;
+       spf=pass (google.com: domain of noreply@contact.whitehouse.gov designates 166.86.2.154 as permitted sender) smtp.mailfrom=noreply@contact.whitehouse.gov;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=contact.whitehouse.gov
+dkim-signature: v=1; a=rsa-sha256; d=contact.whitehouse.gov; s=s1;
+	c=relaxed/relaxed; q=dns/txt; h=From:Subject:Date:Message-ID:To:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe;
+	bh=ic7qyrS9icajH/MFLSvFmqND7pkRVRaAgmp8AOFD99w=;
+	b=RVLduswWFEfFawQjkcKUKGXk0DkonzGZtJxWt15S3MTqhzs5WsvehqWUJKVVVXYNkwAQ9BhZopVqWfh0Gh1nt2/W7ET9LVz+idPzk3UXNlM5tqjjxVXPEVi2HbHxS1IcAGm25bjI42bihKhX69uFXfB1/U9ex54IJyhxiQtAKnbhIAUZXonHIS2jMrzP07Hoqr3NKfK0OV6A8CvKMLuqGRDBTl7VhLMB5spEdrRyN2cG1ERK/xlFLO5EzL
+	yOhTSbAy+DgovbvWlQni1gJ0Wl5wd6UzdaGqBsWuT5N31PPJXw/tU7hGhIXy5/c8bukSeijTY9Cv9G6+QhPKOOd+bObg==
+Received: from LDEOPPROD22DC5 (47eop.iqfed.com [10.10.59.21])
+	by 47eop.iqfed.com with ESMTPS
+	(version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256)
+	; Wed, 20 Aug 2025 20:44:09 -0400
+Message-ID: <013311FB-55B0-43BA-A8D2-10823E799A74@47eop.iqfed.com>
+X-IQCropID: 14118.6159348.6132680.7372401
+List-Unsubscribe: <https://iqconnect.iqfed.com/iqextranet/unsubscribe.aspx?__cid=47PROD&__crop=14118.6159348.6132680.7372401>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+From: "The White House" <noreply@contact.whitehouse.gov>
+To: spencersouthern12@gmail.com
+Date: 20 Aug 2025 20:44:09 -0400
+Subject: Response to your message
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGJvZHk+PHRhYmxlIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmOyBtYXJn
+aW46IDBweDsgd2lkdGg6IDEwMCU7IHBhZGRpbmc6IDMwcHg7IiBjZWxsc3BhY2luZz0i
+MCIgY2VsbHBhZGRpbmc9IjAiIGJvcmRlcj0iMCINCj48dGJvZHkNCj48dHINCj48dGQN
+Cj48dGFibGUgc3R5bGU9ImxpbmUtaGVpZ2h0OiAxLjI1ZW07IGJhY2tncm91bmQtY29s
+b3I6ICNmZmZmZmY7IG1hcmdpbjogMHB4IGF1dG87IHdpZHRoOiA2NTBweDsgZm9udC1m
+YW1pbHk6ICdUaW1lcy1OZXcgUm9tYW4nLCdzZXJpZic7IGNvbG9yOiAjMzMzMzMzOyBm
+b250LXNpemU6IDEycHQ7IHBhZGRpbmc6IDAwcHg7IiBjZWxsc3BhY2luZz0iMCIgYm9y
+ZGVyPSIwIiBhbGlnbj0iY2VudGVyIg0KPjx0Ym9keQ0KDQo+PHRyDQo+PHRkIHN0eWxl
+PSJoZWlnaHQ6IDEyM3B4OyBwYWRkaW5nOiAwcHg7IiBjb2xzcGFuPSIzIiB2YWxpZ249
+InRvcCIgYWxpZ249ImNlbnRlciINCj48dGFibGUgYm9yZGVyPSIwIg0KPjx0Ym9keQ0K
+Pjx0cg0KPjx0ZCBzdHlsZT0icGFkZGluZy10b3A6IDQwcHg7IiBhbGlnbj0iY2VudGVy
+Ig0KPjxJTUcgaGVpZ2h0PTE1NCAgd2lkdGg9MTc1ICBhbHQ9IiIgc3JjPSJodHRwczov
+L2lxY29ubmVjdC5pcWZlZC5jb20vaXFleHRyYW5ldC9DdXN0b21lcnMvNDdQUk9EL1dI
+X1NlYWxfVXBkYXRlZF9KYW5fMjAyNF81MDBweC5wbmciIHN0eWxlPSI7OyIgLw0KPjwv
+VEQ+DQo8L3RyDQo+PHRyDQo+PHRkIHN0eWxlPSJwYWRkaW5nLWJvdHRvbTogMTVweDsg
+dGV4dC1hbGlnbjogY2VudGVyOyBmb250LWZhbWlseTogJ1RpbWVzLU5ldyBSb21hbics
+J3NlcmlmJzsgY29sb3I6ICMzMzMzMzM7IGZvbnQtc2l6ZTogMTJwdDsiPg0KPHANCj5B
+dWd1c3QgMjAsIDIwMjUNCjwvUA0KPjwvVEQ+DQo8L3RyDQo+PC90Ym9keQ0KPjwvdGFi
+bGUNCj48dGFibGUgYm9yZGVyPSIwIiBhbGlnbj0iY2VudGVyIg0KPjx0Ym9keQ0KPjx0
+cg0KPjx0ZCByb3dzcGFuPSI0IiBzdHlsZT0id2lkdGg6IDQwcHg7Ij4mbmJzcDs8L1RE
+Pg0KPHRkIHN0eWxlPSJwYWRkaW5nLWxlZnQ6IDEwcHg7IHBhZGRpbmctcmlnaHQ6IDEw
+cHg7IHRleHQtaW5kZW50OiAwcHg7IHdpZHRoOiA1NzBweDsgZm9udC1mYW1pbHk6ICdU
+aW1lcy1OZXcgUm9tYW4nLCdzZXJpZic7IGNvbG9yOiAjMzMzMzMzOyBmb250LXNpemU6
+IDEycHQ7IiBhbGlnbj0ibGVmdCI+DQo8cCBzdHlsZT0icGFkZGluZy1ib3R0b206IDBw
+eDsgdGV4dC1hbGlnbjogbGVmdDsiDQo+RGVhciZuYnNwO01yLiBTb3V0aGVybiw8YnIg
+Lz4NCjxwPlRoYW5rIHlvdSBmb3Igc2hhcmluZyB5b3VyIGlkZWEgd2l0aCZuYnNwO21l
+LjxiciAvPg0KPGJyIC8NCj48c3BhbiBzdHlsZT0iZm9udC1zaXplOiBpbmhlcml0OyI+
+QW1lcmljYSBpcyB0aGUgZ3JlYXRlc3QgZW5naW5lIG9mIGlubm92YXRpb24gdGhlIHdv
+cmxkIGhhcyBldmVyIHNlZW4uJm5ic3A7IEZyb20gdGhlIGJlZ2lubmluZyZuYnNwO29m
+IG91ciBuYXRpb25hbCBzdG9yeSwgb3VyIHBlb3BsZSBoYXZlIHB1c2hlZCB0aGUgYm91
+bmRhcmllcyBvZiB3aGF0IGlzIHBvc3NpYmxlPC9zcGFuDQo+PHNwYW4gc3R5bGU9ImZv
+bnQtc2l6ZTogMTJwdDsgZm9udC1mYW1pbHk6ICdUaW1lcyBOZXcgUm9tYW4nLCBzZXJp
+ZjsiDQo+Jm1kYXNoOzwvc3Bhbg0KPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IGluaGVy
+aXQ7Ij5pbnNwaXJlZCBieSB0aGUgYmVsaWVmIHRoYXQgaGFyZCB3b3JrIHdpbGwmbmJz
+cDtsZWFkIHRvIGxhc3Rpbmcgc3VjY2Vzcy48YnIgLz4NCjxiciAvDQo+PC9zcGFuDQo+
+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogaW5oZXJpdDsiPk15IEFkbWluaXN0cmF0aW9u
+IGlzIHVubGVhc2hpbmcgdGhlIEdvbGRlbiBBZ2Ugb2YgQW1lcmljYS4mbmJzcDsgV2Ug
+YXJlIGN1dHRpbmcgcmVkIHRhcGUsIGJyaW5naW5nIGpvYnMgYmFjayBob21lJm5ic3A7
+dG8gb3VyIE5hdGlvbjwvc3Bhbg0KPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IDEycHQ7
+IGZvbnQtZmFtaWx5OiAnVGltZXMgTmV3IFJvbWFuJywgc2VyaWY7Ig0KPiZyc3F1bzs8
+L3NwYW4NCj48c3BhbiBzdHlsZT0iZm9udC1zaXplOiBpbmhlcml0OyI+cyBzaG9yZXMs
+IHJlc3RvcmluZyBwcmlkZSBpbiBvdXIgd29yaywgYW5kJm5ic3A7b25jZSBhZ2FpbiBw
+dXR0aW5nIHRoZSBuZWVkcyBvZiB0aGUgQW1lcmljYW4gcGVvcGxlJm5ic3A7Zmlyc3Qu
+Jm5ic3A7IEV2ZXJ5IGRheSwgd2UgYXJlIHJlc2N1aW5nIHRoZSBBbWVyaWNhbiBEcmVh
+bSBmb3IgY2l0aXplbnMgYWxsIGFjcm9zcyBvdXIgbGFuZC48YnIgLz4NCjxiciAvDQo+
+PC9zcGFuDQo+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogaW5oZXJpdDsiPllvdXIgY3Jl
+YXRpdml0eSBhbmQgZGV0ZXJtaW5hdGlvbiByZWZsZWN0IHRoZSBzcGlyaXQgdGhhdCBt
+YWtlcyBvdXIgY291bnRyeSBncmVhdC4mbmJzcDsgSSB3aXNoIHlvdSB0aGUgdmVyeSBi
+ZXN0IG9mIGx1Y2sgYXMgeW91IHB1cnN1ZSB5b3VyIGdvYWxzIGFuZCB3b3JrIHRvIGJy
+aW5nIHlvdXIgaWRlYXMgdG8gbGlmZS48L3NwYW4NCj4NCjwvUD4NCjwvUD4NCjxwIHN0
+eWxlPSJwYWRkaW5nLWJvdHRvbTogMHB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7Ij5TaW5j
+ZXJlbHksPGJyIC8NCj48SU1HIGhlaWdodD0xMjIgIHdpZHRoPTIyNSAgYWx0PSIiIHNy
+Yz0iaHR0cHM6Ly9pcWNvbm5lY3QuaXFmZWQuY29tL2lxZXh0cmFuZXQvQ3VzdG9tZXJz
+LzQ3UFJPRC9ESlRfQ0hfMi0yNi0yNV9PQS5wbmciIHN0eWxlPSI7OyIgLz4NCjxiciAv
+Pg0KPGJyIC8+DQo8L1ANCj48L1REPg0KPHRkIHN0eWxlPSJ3aWR0aDogNDBweDsiPiZu
+YnNwOzwvVEQ+DQo8L3RyDQo+PC90Ym9keQ0KPjwvdGFibGUNCj48L1REPg0KPC90cg0K
+PjwvdGJvZHkNCj48L3RhYmxlDQo+PHRhYmxlIGJvcmRlcj0iMCIgYWxpZ249ImNlbnRl
+ciINCj48dGJvZHkNCg0KPjx0cg0KPjx0ZCBzdHlsZT0icGFkZGluZy1sZWZ0OiAxMHB4
+OyBwYWRkaW5nLXJpZ2h0OiAxMHB4O3BhZGRpbmctdG9wOiAxN3B4OyB0ZXh0LWluZGVu
+dDogMHB4OyB3aWR0aDogNjI1cHg7IiBhbGlnbj0ibGVmdCI+DQo8cCBzdHlsZT0icGFk
+ZGluZy1sZWZ0OiA1MHB4OyBwYWRkaW5nLXJpZ2h0OiA1MHB4OyBmb250LWZhbWlseTog
+J1RpbWVzLU5ldyBSb21hbicsJ3NlcmlmJzsgY29sb3I6ICMzMzMzMzM7IGZvbnQtc2l6
+ZTogMTBwdDsgdGV4dC1hbGlnbjogY2VudGVyOyINCj48ZW0+WW91IG1heSBmb2xsb3cg
+UHJlc2lkZW50IFRydW1wIGFuZCB0aGUgV2hpdGUgSG91c2Ugb24NCjxhIGhyZWY9Imh0
+dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9XaGl0ZUhvdXNlIiB0YXJnZXQ9Il9ibGFuayI+
+RmFjZWJvb2s8L2ENCj4sDQo8YSBocmVmPSJodHRwczovL3d3dy5pbnN0YWdyYW0uY29t
+L3doaXRlaG91c2UvIiB0YXJnZXQ9Il9ibGFuayI+SW5zdGFncmFtPC9hPiwNCjxhIGhy
+ZWY9Imh0dHBzOi8vd3d3LnR3aXR0ZXIuY29tL1doaXRlSG91c2UiIHRhcmdldD0iX2Js
+YW5rIj5YPC9hPiwgYW5kDQo8YSBocmVmPSJodHRwczovL3d3dy55b3V0dWJlLmNvbS9X
+aGl0ZUhvdXNlIiB0YXJnZXQ9Il9ibGFuayI+WW91VHViZTwvYT4uPC9lbT4NCjwvUA0K
+PjwvVEQ+DQo8L3RyDQo+PC90Ym9keQ0KPjwvdGFibGU+DQo8cCBzdHlsZT0idGV4dC1p
+bmRlbnQ6IDBweDsgdGV4dC1hbGlnbjogY2VudGVyOyINCj48c3BhbiBzdHlsZT0iZm9u
+dC1zaXplOiAxMHB0OyBmb250LWZhbWlseTogJ1RpbWVzLU5ldyBSb21hbicsIHNlcmlm
+OyBjb2xvcjogIzMzMzMzMzsiDQoNCj48YSBocmVmPSJodHRwczovL3d3dy53aGl0ZWhv
+dXNlLmdvdiI+V2hpdGUgSG91c2UgV2Vic2l0ZTwvYT4gfCA8YSBocmVmPSJodHRwczov
+L3d3dy53aGl0ZWhvdXNlLmdvdi9wcml2YWN5LyI+UHJpdmFjeSBQb2xpY3k8L2E+IHwg
+PGEgaHJlZj0iaHR0cHM6Ly93d3cud2hpdGVob3VzZS5nb3YvY29udGFjdCI+Q29udGFj
+dCB0aGUgV2hpdGUgSG91c2U8L2ENCj48L3NwYW4+DQo8L1A+DQo8cD4NCjwvUA0KPjwv
+VEQ+DQo8L3RyDQo+PC90Ym9keQ0KPjwvdGFibGUNCj48L2JvZHk+
+
+
